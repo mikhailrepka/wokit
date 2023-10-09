@@ -1,0 +1,33 @@
+{
+	"Get started": "/get-started.html",
+	"Overview": "/docs/overview.html",
+	"Core": {
+		"Colors": "/docs/colors.html",
+		"Grid": "/docs/grid.html",
+		"Header": "/docs/header.html",
+		"Hero": "/docs/hero.html",
+		"Nav": "/docs/nav.html",
+		"Form layout": "/docs/form-layout.html",
+		"Input": "/docs/input.html",
+		"Textarea": "/docs/textarea.html",
+		"Select": "/docs/select.html",
+		"Checkbox / radio": "/docs/checkbox-radio.html",
+		"Buttons": "/docs/buttons.html",
+		"Member pict": "/docs/memberpict.html",
+		"Badges": "/docs/badges.html",
+		"Cards": "/docs/cards.html",
+		"Table": "/docs/table.html",
+		"Breadcrumbs": "/docs/breadcrumbs.html",
+		"Tabs": "/docs/tabs.html",
+		"Icons": "/docs/icons.html"
+	},
+	"Components": {
+		"Alert": "/docs/alert.html",
+		"Tooltip": "/docs/tooltip.html",
+		"Carousel": "/docs/carousel.html",
+		"Dropdown": "/docs/dropdown.html",
+		"Popup": "/docs/popup.html",
+		"Confirm dialog": "/docs/confirm-dialog.html",
+		"Switcher": "/docs/switcher.html"
+	}
+}
