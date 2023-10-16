@@ -6,10 +6,14 @@ $_links = [];
 foreach (json_decode(file_get_contents(DIR.'/app/docs.json'),true) as $ttl => $val) {
 	$link = "";
 	if (is_array($val)) {
-		$link = $ttl;
-		$link = strtolower($link);
-		$link = str_replace(' ','-',$link);
-		$_links[$ttl] = "/{$link}.html";
+		$var = explode("||",$ttl);
+		$title = $var[0];
+		$link = $var[1];
+		// $link = $ttl;
+		// $link = strtolower($link);
+		// $link = str_replace(' ','-',$link);
+		// $_links[$ttl] = "/{$link}.html";
+		$_links[$title] = $link;
 		foreach ($val as $t=>$v) {
 			$_links[$t] = $v;
 		}
@@ -19,8 +23,8 @@ foreach (json_decode(file_get_contents(DIR.'/app/docs.json'),true) as $ttl => $v
 	}
 }
 
-// echo json_encode($_links);
-// var_dump($links);
+echo json_encode($_links)."<br>";
+
 foreach ($_links as $k=>$v) {
 	if (!file_exists(DIR.$v)) {
 		$fd = fopen(DIR.$v,'w+');
@@ -28,19 +32,6 @@ foreach ($_links as $k=>$v) {
 		fclose($fd);
 	}
 }
-
-// echo "<br><br>";
-
-// $hld = opendir(DIR.'/docs');
-// while ($file = readdir($hld)) {
-// 	if ( ($file != '..') && ($file != '.') ) {
-// 		foreach ($_links as $t=>$link) {
-// 			$lnk = str_replace('/docs/','',$link);
-// 			if ($lnk == $file) echo "! {$file}<br>";
-// 		}
-// 	}
-// }
-// closedir($hld);
 
 function genMenu($link) {
 	$menu = "";
@@ -51,10 +42,13 @@ function genMenu($link) {
 			$menu.= ">{$ttl}</a></li>";
 		}
 		else {
-			$lnk = "/".strtolower($ttl).".html";
+			$var = explode("||",$ttl);
+			// $lnk = "/".strtolower($ttl).".html";
+			$lmk = $var[1];
 			$menu.= "<li><a href=\"{$lnk}\"";
 			if ($lnk == $link) $menu.= " class=\"--active\"";
-			$menu.= ">{$ttl}</a><ul>";
+			// $menu.= ">{$ttl}</a><ul>";
+			$menu.= ">{$var[0]}</a><ul>";
 			foreach ($val as $k=>$v) {
 				$menu.= "<li><a href=\"{$v}\"";
 				if ($v == $link) $menu.= " class=\"--active\"";
@@ -70,10 +64,13 @@ function getMenu($link) {
 	$html = "";
 	foreach (json_decode(file_get_contents(DIR.'/app/docs.json'),true) as $ttl => $val) {
 		if (is_array($val)) {
-			$lnk = "/".strtolower($ttl).".html";
+			$var = explode("||",$ttl);
+			// $lnk = "/".strtolower($ttl).".html";
+			$lnk = $var[1];
 			$html.= "<li";
 			if ($lnk == $link) $html.= " class=\"--active\"";
-			$html.= "><a href=\"{$lnk}\">{$ttl}</a><ul>";
+			$html.= "><a href=\"{$lnk}\">{$var[0]}</a><ul>";
+			// $html.= "><a href=\"{$lnk}\">{$ttl}</a><ul>";
 			foreach ($val as $k=>$v) {
 				$html.= "<li";
 				if ($v == $link) $html.= " class=\"--active\"";
@@ -140,17 +137,7 @@ function createPage($title,$link,$foreced=0) {
 }
 
 foreach ($_links as $t=>$link) {
-	// echo "link: {$link}<br>";
-	// if (!file_exists(DIR.$link)) {
 		echo "{$link}<br>";
 		echo DIR.$link."<br>";
-		// $fd = fopen(DIR."/tmp".$link,"w+");
-		// $content = genPage($t,$link);
-		// fputs($fd,$content);
-		// fclose($fd);
 		createPage($t,$link,1);
-	// }
-	// $lnk = str_replace('/docs/','',$link);
-	// if ($lnk == $file) echo "! {$file}<br>";
-
 }

@@ -58,6 +58,7 @@
 
 	--wo-gutter: 1rem;
 	--wo-gutter-additional: 1.125rem;
+	--wo-gutter-line: 1.75rem;
 
 	--wo-gutter-xs: 2vw;
 	--wo-gutter-xs-additional: 0vw;
@@ -66,7 +67,7 @@
 	--wo-border-radius-input: 0.625rem;
 	--wo-border-radius-micro: 0.25rem;
 	--wo-border-radius-pict: 0.625rem;
-	--wo-border-radius-memberpict: 100rem;
+	--wo-border-radius-circle: 100rem;
 }
 
 /* Normalize */
@@ -142,7 +143,7 @@ p {
 	margin-bottom: var(--wo-gutter);
 	font-size: var(--wo-font-size);
 	color: var(--wo-black);
-	line-height: calc(var(--wo-font-size) * 1.75);
+	line-height: var(--wo-gutter-line);
 }
 p.--subtitle {
 	font-size: var(--wo-font-size-s);
@@ -171,7 +172,7 @@ em {
 /* WO Notice */
 .__notice {
 	font-size: var(--wo-font-size);
-	line-height: calc(var(--wo-font-size) * 1.75);
+	line-height: var(--wo-gutter-line);
 	display: block;
 	padding: 0;
 	margin: 0;
@@ -354,6 +355,7 @@ em {
 	background-color: var(--wo-inverted-light);
 }
 
+/* WO Panel */
 .__wo-panel {
 	display: block;
 	margin: 0;
@@ -506,7 +508,7 @@ em {
 	border: 1px solid var(--wo-primary);
 }
 .__wo-btn.--primary.--outline:hover {
-	color: var(--wo-white);
+	color: var(--wo-white) !important;
 	background: var(--wo-primary-light);
 	border: 1px solid var(--wo-primary-light);
 }
@@ -515,6 +517,9 @@ em {
 	color: var(--wo-white);
 	background: var(--wo-primary-dim);
 	border: 1px solid var(--wo-primary-dim);
+}
+a.__wo-btn.--primary.--outline:visited {
+	color: var(--wo-primary);
 }
 
 .__wo-btn.--danger {
@@ -699,6 +704,7 @@ table.__wo-table tbody tr:last-child td {
 	border-bottom: none;
 }
 
+/* WO Flex*/
 .--wo-flex-left {
 	display: flex;
 	justify-content: flex-start;
@@ -807,6 +813,7 @@ table.__wo-table tbody tr:last-child td {
 	z-index: 2;
 }
 
+/* WO Menu List */
 ul.__wo-menu-list {
 	width: auto;
 	display: flex;
@@ -848,7 +855,7 @@ ul.__wo-menu-tree {
 	list-style: none;
 	padding: 0;
 	margin: 0;
-	line-height: calc(var(--wo-gutter) * 1.75);
+	line-height: var(--wo-gutter-line);
 }
 ul.__wo-menu-tree li {
 
@@ -1075,4 +1082,163 @@ ul.__wo-menu-tree li ul li::before {
 .__wo-bc ul li a:hover {
 	color: var(--wo-primary);
 	text-decoration: underline;
+}
+
+/* circle badges */
+.__badge-circle {
+	display: inline-block;
+	background-color: var(--wo-shadow);
+	border: 1px solid var(--wo-gray-light);
+	border-radius: var(--wo-border-radius-circle);
+	-moz-border-radius: var(--wo-border-radius-circle);
+	-webkit-border-radius: var(--wo-border-radius-circle);
+	width: 1.5rem;
+	height: 1.5rem;
+	align-items: center;
+	justify-content: center;
+	font-size: 0.7rem;
+	font-weight: 600;
+}
+.__badge-circle.--wo-size-xs {
+
+}
+.__badge-circle.--wo-size-s {
+
+}
+.__badge-circle.--wo-size-m {
+
+}
+.__badge-circle.--wo-size-l {
+	
+}
+.__badge-circle.--wo-size-xl {
+
+}
+
+/* WO lists */
+.__wo-ul {
+	padding: 0;
+	list-style: none;
+	display: block;
+	line-height: var(--wo-gutter-line);
+}
+.__wo-ul li {
+	display: block;
+}
+.__wo-ul li::before {
+	display: inline-block;
+	content: '\2014';
+	margin-right: .5rem;
+}
+.__wo-ul.--plain li::before {
+	content: '';
+	margin-right: 0rem;
+}
+
+/* WO checkboxes */
+input[type='checkbox'] {
+	display: inline-flex;
+	appearance: none;
+	width: 1.1rem;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+	cursor: pointer;
+}
+input[type='checkbox']:disabled {
+	cursor: not-allowed;
+}
+
+input[type='checkbox']::before {
+	content: '';
+	position: relative;
+	display: inline-block;
+	width: 1.1rem;
+	height: 1.1rem;
+	transform: translateY(+.25rem);
+	border-radius: var(--wo-border-radius-button);
+	-moz-border-radius: var(--wo-border-radius-button);
+	-webkit-border-radius: var(--wo-border-radius-button);
+	transition: all .3s ease-out;
+	-o-transition: all .3s ease-out;
+	-ms-transition: all .3s ease-out;
+	-moz-transition: all .3s ease-out;
+	-webkit-transition: all .3s ease-out;
+}
+input[type='checkbox']::before {
+	border: .1rem solid var(--wo-gray);
+}
+input[type='checkbox']:checked::before {
+	background-color: var(--wo-gray);
+}
+input[type='checkbox']:disabled::before {
+	border: .1rem solid var(--wo-gray-light);
+}
+input[type='checkbox']:disabled:checked::before {
+	background-color: var(--wo-gray-light);
+}
+
+input[type='checkbox'].--wo-primary::before {
+	border: .1rem solid var(--wo-primary);
+}
+input[type='checkbox'].--wo-primary:checked::before {
+	background-color: var(--wo-primary);
+}
+input[type='checkbox'].--wo-primary:disabled::before {
+	border: .1rem solid var(--wo-primary-dim);
+}
+input[type='checkbox'].--wo-primary:disabled:checked::before {
+	background-color: var(--wo-primary-dim);
+}
+
+input[type='checkbox'].--wo-danger::before {
+	border: .1rem solid var(--wo-danger);
+}
+input[type='checkbox'].--wo-danger:checked::before {
+	background-color: var(--wo-danger);
+}
+input[type='checkbox'].--wo-danger:disabled::before {
+	border: .1rem solid var(--wo-danger-dim);
+}
+input[type='checkbox'].--wo-danger:disabled:checked::before {
+	background-color: var(--wo-danger-dim);
+}
+
+input[type='checkbox'].--wo-warning::before {
+	border: .1rem solid var(--wo-warning);
+}
+input[type='checkbox'].--wo-warning:checked::before {
+	background-color: var(--wo-warning);
+}
+input[type='checkbox'].--wo-warning:disabled::before {
+	border: .1rem solid var(--wo-warning-dim);
+}
+input[type='checkbox'].--wo-warning:disabled:checked::before {
+	background-color: var(--wo-warning-dim);
+}
+
+input[type='checkbox'].--wo-info::before {
+	border: .1rem solid var(--wo-info);
+}
+input[type='checkbox'].--wo-info:checked::before {
+	background-color: var(--wo-info);
+}
+input[type='checkbox'].--wo-info:disabled::before {
+	border: .1rem solid var(--wo-info-dim);
+}
+input[type='checkbox'].--wo-info:disabled:checked::before {
+	background-color: var(--wo-info-dim);
+}
+
+input[type='checkbox'].--wo-success::before {
+	border: .1rem solid var(--wo-success);
+}
+input[type='checkbox'].--wo-success:checked::before {
+	background-color: var(--wo-success);
+}
+input[type='checkbox'].--wo-success:disabled::before {
+	border: .1rem solid var(--wo-success-dim);
+}
+input[type='checkbox'].--wo-success:disabled:checked::before {
+	background-color: var(--wo-success-dim);
 }

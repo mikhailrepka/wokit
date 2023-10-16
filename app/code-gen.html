@@ -1,0 +1,25 @@
+<style>
+	textarea {
+		outline:none;
+		border: 1px solid #ccc;
+		font-size: 1rem;
+		padding: .5rem .5rem;
+		width: calc(100% - 1rem);
+		font-family: 'Courier New', Courier, monospace;
+		margin-bottom: 1rem;
+	}
+</style>
+
+<p>Code from</p>
+<textarea id="code-from" style="width:100%;height:15rem;" onkeyup="genCode()"></textarea>
+<p>Code to</p>
+<textarea id="code-to" style="width:100%;height:25rem;"></textarea>
+
+<script>
+	function genCode() {
+		let code = document.getElementById('code-from').value;
+		code = code.replace(/</gi,'&lt;');
+		code = code.replace(/>/gi,'&gt;');
+		document.getElementById('code-to').value = code;
+	}
+</script>

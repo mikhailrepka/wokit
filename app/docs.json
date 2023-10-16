@@ -1,7 +1,7 @@
 {
 	"Get started": "/get-started.html",
 	"Overview": "/docs/overview.html",
-	"Core": {
+	"Core||/core.html": {
 		"Colors": "/docs/colors.html",
 		"Grid": "/docs/grid.html",
 		"Header": "/docs/header.html",
@@ -19,9 +19,10 @@
 		"Table": "/docs/table.html",
 		"Breadcrumbs": "/docs/breadcrumbs.html",
 		"Tabs": "/docs/tabs.html",
+		"Lists": "/docs/lists.html",
 		"Icons": "/docs/icons.html"
 	},
-	"Components": {
+	"Components||/components.html": {
 		"Alert": "/docs/alert.html",
 		"Tooltip": "/docs/tooltip.html",
 		"Carousel": "/docs/carousel.html",
@@ -29,5 +30,7 @@
 		"Popup": "/docs/popup.html",
 		"Confirm dialog": "/docs/confirm-dialog.html",
 		"Switcher": "/docs/switcher.html"
-	}
+	},
+	"Roadmap": "/roadmap.html",
+	"Changelog": "/changelog.html"
 }
