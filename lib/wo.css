@@ -166,7 +166,7 @@ em {
 	font-size: inherit;
 	font-style: italic;
 	font-style: italic;
-	color: var(--wo-danger-light);
+	color: var(--wo-primary-light);
 }
 
 /* WO Notice */
@@ -1248,4 +1248,33 @@ input[type='checkbox'].--wo-success:disabled::before {
 }
 input[type='checkbox'].--wo-success:disabled:checked::before {
 	background-color: var(--wo-success-dim);
+}
+
+/* User Pict */
+.__wo-user {
+	display: flex;
+	align-items: center;
+}
+.__wo-user .__wo-pict {
+	display: block;
+	width: 1rem;
+	height: 1rem;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-attachment: scroll;
+	background-color: var(--wo-gray-light);
+	background-size: cover;
+	-moz-background-size: cover;
+	-webkit-background-size: cover;
+	border-radius: var(--wo-border-radius-circle);
+	-moz-border-radius: var(--wo-border-radius-circle);
+	-webkit-border-radius: var(--wo-border-radius-circle);
+	margin-right: calc(var(--wo-gutter) / 2);
+}
+.__wo-user a {
+	color: var(--wo-black);
+	text-decoration: none;
+}
+.__wo-user a:hover {
+	text-decoration: underline;
 }

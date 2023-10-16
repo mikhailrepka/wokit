@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>%title% / %site-title%</title>
+		<title>WO Kit</title>
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
@@ -9,9 +9,9 @@
 		<meta name="copyright" content="2023 (c) Copyright Webberin Team">
 		<meta name="description" content="">
 		<meta name="keywords" content="">
-		<meta property="og:title" content="%title%">
+		<meta property="og:title" content="WO Kit">
 		<meta property="og:type" content="website">
-		<meta property="og:url" content="//%link%">
+		<meta property="og:url" content="//%url%">
 		<meta property="og:image" content="">
 		<meta name="og:image" content="">
 		<meta http-equiv="cache-control" content="max-age=0" />
@@ -47,7 +47,8 @@
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
-		<link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/color-brewer.min.css" rel="stylesheet" charset="utf-8">
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/a11y-light.min.css" rel="stylesheet" charset="utf-8">
+		<link href="https://%url%/lib/key.css" rel="stylesheet" charset="utf-8">
 		<link href="https://%url%/lib/wo.css?1.0.3" rel="stylesheet" charset="utf-8">
 	</head>
 	<body>
@@ -66,38 +67,33 @@
 						</ul>
 					</div>
 					<div class="--wo-text-right">
-						<a href="https://%url%/versions/wokit-0.5.2.zip" download class="__wo-btn --wo-size-m">Download Kit</a>
+						<button class="__wo-btn --wo-size-m">Download Kit</button>
 					</div>
 				</div>
 			</header>
 			<div class="__fixed-placeholder"></div>
 			<div class="__wo-holder-10"></div>
 			<div class="__wo-row">
-				<div class="__wo-col-m-12">
-					<div class="__wo-bc">
-						<ul>
-							<li><a href="https://%url%/">Home</a></li>
-							<li><a href="https://%url%/docs/overview.html">Documentation</a></li>
-							%bc%
-						</ul>
-					</div>
-					<div class="__wo-holder-5"></div>
-					<h1>%title%</h1>
-				</div>
-				<div class="__wo-col-m-3 __wo-col-xs-12">
-					<div class="__wo-panel">
-						<ul class="__wo-menu-tree">
-							%menu%
-						</ul>
-					</div>
-				</div>
-				<div class="__wo-col-m-9 __wo-col-xs-12">
-					%content%
+				<div class="__wo-col-m-12 --wo-text-center">
+					<div class="__wo-holder-20"></div>
+					<div class="__wo-holder-20"></div>
+					<picture>
+						<img src="/ui/logo-sign.svg" alt="WO Kit" />
+					</picture>
+					<div class="__wo-holder-10"></div>
+					<h1 class="--color-primary">WO Kit</h1>
+					<div class="__wo-holder-0"></div>
+					<p>Ultra simple lightweight<br>UI framework</p>
+					<div class="__wo-holder-0"></div>
+					<a download href="https://%url%/versions/wokit-0.5.2.zip" class="__wo-btn --wo-size-l --success"><i class="__wo-icon-sr-download"></i>Download Kit<i></i></a>
+					<div class="__wo-holder-1"></div>
+					<p class="--subtitle">Version 0.5.2 &nbsp;&nbsp;&nbsp;<a target="_blank" href="https://github.com/mikhailrepka/wokit"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="11.984"><path fill-rule="evenodd" d="M7.419 11.983c4.171-.12 4.582-1 4.582-5.983 0-5.5-.5-6-6-6s-6 .5-6 6c0 5 .413 5.867 4.614 5.984a.251.251 0 0 0 .05-.161c0-.125-.005-1.408-.008-1.85-1.518.319-1.839-.71-1.839-.71a1.416 1.416 0 0 0-.607-.774c-.5-.328.038-.322.038-.322a1.144 1.144 0 0 1 .84.552 1.184 1.184 0 0 0 1.589.439 1.117 1.117 0 0 1 .347-.707c-1.212-.133-2.487-.588-2.487-2.615a2.012 2.012 0 0 1 .562-1.42 1.846 1.846 0 0 1 .054-1.4s.459-.142 1.5.542a5.338 5.338 0 0 1 2.734 0c1.043-.685 1.5-.542 1.5-.542a1.842 1.842 0 0 1 .054 1.4 2.007 2.007 0 0 1 .562 1.42c0 2.033-1.277 2.48-2.493 2.611a1.243 1.243 0 0 1 .371.98c0 .473 0 1.31-.005 1.864v.537a.281.281 0 0 0 .048.16Z" data-name="4747499-github-media-social-video"/></svg></a>&nbsp;&nbsp;&nbsp;<a href="https://gitlab.com/oddmike/wokit" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="11.043"><path d="m.699 4.248 5.3 6.793L.19 6.826a.449.449 0 0 1-.167-.231.443.443 0 0 1 0-.284Zm3.092 0h4.417L6 11.043ZM2.466.148l1.325 4.1H.699l1.325-4.1a.213.213 0 0 1 .221-.154.213.213 0 0 1 .221.154Zm8.834 4.1.676 2.061a.443.443 0 0 1 0 .284.449.449 0 0 1-.167.231L6 11.043Zm0 0H8.208l1.325-4.1a.213.213 0 0 1 .221-.154.213.213 0 0 1 .221.154Z"/></svg></a><div class="__wo-holder-1"></div><a class="__wo-btn --wo-size-s --primary --outline" href="https://%url%/get-started.html">Get started with docs</a></p>
 				</div>
 			</div>
+			<div class="__wo-holder-20"></div>
 			<div class="__wo-holder-0"></div>
 			<footer class="__wo-footer">
-				<div>&copy; %year%. Mike Repka. All rights reserved.</div>
+				<div>&copy; 2023. Mike Repka. All rights reserved.</div>
 			</footer>
 		</main>
 		<!-- js -->
@@ -106,4 +102,3 @@
 		<script src="/lib/wo.js"></script>
 	</body>
 </html>
-

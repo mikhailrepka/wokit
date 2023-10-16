@@ -1,2 +1,28 @@
-<h3>Pictures</h3>
-<p>Soon in phase 1</p>
+<h3>Component</h3>
+<p>We have three ways to use pictures in web:</p>
+<ul class="__wo-ul">
+	<li>Insert <code>&lt;img&gt;</code> with <em>src</em> or <code>&lt;picture&gt;</code> with <em>source</em></li>
+	<li>Using <code>style="background-image:url('&lt;source&gt;')"</code></li>
+	<li>Embedding base64 encode picture to code</li>
+</ul>
+<p>I'm using first and seconds ways often, that's why I made component to simplify my work.</p>
+<div class="__wo-holder-10"></div>
+<h3>User picture</h3>
+<p>For making author block for blog, or userpic block for your interface</p>
+<div class="__wo-holder-1"></div>
+<p class="__notice">Default size</p>
+<div class="__wo-user">
+	<div class="__wo-pict" style="background-image:url('https://xsgames.co/randomusers/avatar.php?g=male');"></div><a href="javascript:;">John Doe</a>
+</div>
+<div class="__wo-holder-10"></div>
+<div class="__wo-code">
+	<pre class="language-html"><code>&lt;div class="__wo-user"&gt;
+	&lt;div class="__wo-pict" style="background-image:url('https://xsgames.co/randomusers/avatar.php?g=male');"&gt;&lt;/div&gt;&lt;a href="javascript:;"&gt;John Doe&lt;/a&gt;
+&lt;/div&gt;</code></pre>
+</div>
+<div class="__wo-holder-5"></div>
+<p>Container <code>.__wo_user</code> is <em>inline-flex</em>, you can use it in text.</p>
+
+<!-- xsgames.co/randomusers/avatar.php?g=pixel
+xsgames.co/randomusers/avatar.php?g=female
+xsgames.co/randomusers/avatar.php?g=male -->

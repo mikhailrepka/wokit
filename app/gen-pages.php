@@ -95,7 +95,8 @@ function genPage($title,$link) {
 	$_d['title'] = $title;
 	$config = json_decode(file_get_contents($_SERVER['DOCUMENT_ROOT']."/app/config.json"),true);
 	$_d['site-title'] = $config['title'];
-	$_d['url'] = $config['url'].$link;
+	$_d['url'] = $config['url'];
+	$_d['link'] = $config['url'].$link;
 	$bc = "";
 	$lnk = "";
 	foreach (explode("/",$link) as $val) {
@@ -137,7 +138,13 @@ function createPage($title,$link,$foreced=0) {
 }
 
 foreach ($_links as $t=>$link) {
-		echo "{$link}<br>";
-		echo DIR.$link."<br>";
-		createPage($t,$link,1);
+	echo "{$link}<br>";
+	echo DIR.$link."<br>";
+	createPage($t,$link,1);
 }
+$index = file_get_contents($_SERVER['DOCUMENT_ROOT']."/app/content/index.html");
+$config = json_decode(file_get_contents($_SERVER['DOCUMENT_ROOT']."/app/config.json"),true);
+$index = str_replace("%url%",$config['url'],$index);
+$fd = fopen($_SERVER['DOCUMENT_ROOT']."/index.html","w+");
+fputs($fd,$index);
+fclose($fd);
