@@ -13,7 +13,7 @@ Ultra simple lightweight UI framework.
 
 ### Version
 
-Current version **0.5.1 Phase 1 (α)**
+Current version **0.5.2 Phase 1 (α)**
 
 ### Links
 
