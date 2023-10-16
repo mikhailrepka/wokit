@@ -62,6 +62,7 @@ function genMenu($link) {
 
 function getMenu($link) {
 	$html = "";
+	$config = json_decode(file_get_contents($_SERVER['DOCUMENT_ROOT']."/app/config.json"),true);
 	foreach (json_decode(file_get_contents(DIR.'/app/docs.json'),true) as $ttl => $val) {
 		if (is_array($val)) {
 			$var = explode("||",$ttl);
@@ -69,19 +70,19 @@ function getMenu($link) {
 			$lnk = $var[1];
 			$html.= "<li";
 			if ($lnk == $link) $html.= " class=\"--active\"";
-			$html.= "><a href=\"{$lnk}\">{$var[0]}</a><ul>";
+			$html.= "><a href=\"https://{$config['url']}{$lnk}\">{$var[0]}</a><ul>";
 			// $html.= "><a href=\"{$lnk}\">{$ttl}</a><ul>";
 			foreach ($val as $k=>$v) {
 				$html.= "<li";
 				if ($v == $link) $html.= " class=\"--active\"";
-				$html.= "><a href=\"{$v}\">{$k}</a></li>";
+				$html.= "><a href=\"https://{$config['url']}{$v}\">{$k}</a></li>";
 			}
 			$html.= "</ul></li>";
 		}
 		else {
 			$html.= "<li";
 			if ($val == $link) $html.= " class=\"--active\"";
-			$html.= "><a href=\"{$val}\">{$ttl}</a></li>";
+			$html.= "><a href=\"https://{$config['url']}{$val}\">{$ttl}</a></li>";
 		}
 	}
 	return $html;
@@ -105,7 +106,7 @@ function genPage($title,$link) {
 			$ttl = str_replace("-"," ",$val);
 			$ttl = str_replace(".html","",$ttl);
 			$ttl = ucfirst($ttl);
-			$bc.= "<li><a href=\"{$lnk}.html\">{$ttl}</a></li>";
+			$bc.= "<li><a href=\"https://{$config['url']}{$lnk}.html\">{$ttl}</a></li>";
 		}
 	}
 	$_d['bc'] = $bc;

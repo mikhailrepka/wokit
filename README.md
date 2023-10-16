@@ -17,7 +17,8 @@ Current version **0.5.2 Phase 1 (α)**
 
 ### Links
 
-[kit.webberin.dev](https://kit.webberin.dev) — website
+[Docs](https://mikhailrepka.github.io/wokit/)
+[Backup Docs](https://kit.webberin.dev/)
 
 ### Roadmap
 
