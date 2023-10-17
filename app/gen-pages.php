@@ -70,19 +70,19 @@ function getMenu($link) {
 			$lnk = $var[1];
 			$html.= "<li";
 			if ($lnk == $link) $html.= " class=\"--active\"";
-			$html.= "><a href=\"https://{$config['url']}{$lnk}\">{$var[0]}</a><ul>";
+			$html.= "><a href=\"{$config['type']}://{$config['url']}{$lnk}\">{$var[0]}</a><ul>";
 			// $html.= "><a href=\"{$lnk}\">{$ttl}</a><ul>";
 			foreach ($val as $k=>$v) {
 				$html.= "<li";
 				if ($v == $link) $html.= " class=\"--active\"";
-				$html.= "><a href=\"https://{$config['url']}{$v}\">{$k}</a></li>";
+				$html.= "><a href=\"{$config['type']}://{$config['url']}{$v}\">{$k}</a></li>";
 			}
 			$html.= "</ul></li>";
 		}
 		else {
 			$html.= "<li";
 			if ($val == $link) $html.= " class=\"--active\"";
-			$html.= "><a href=\"https://{$config['url']}{$val}\">{$ttl}</a></li>";
+			$html.= "><a href=\"{$config['type']}://{$config['url']}{$val}\">{$ttl}</a></li>";
 		}
 	}
 	return $html;
@@ -97,7 +97,12 @@ function genPage($title,$link) {
 	$config = json_decode(file_get_contents($_SERVER['DOCUMENT_ROOT']."/app/config.json"),true);
 	$_d['site-title'] = $config['title'];
 	$_d['url'] = $config['url'];
+	$_d['full-url'] = $config['type']."://".$config['url'];
 	$_d['link'] = $config['url'].$link;
+	$_d['meta-descr'] = $config['meta_descr'];
+	$_d['meta-kw'] = $config['meta_kw'];
+	$_d['meta-pict'] = $config['type']."://".$config['url'].$config['meta_pict'];
+	$_d['year'] = date('Y');
 	$bc = "";
 	$lnk = "";
 	foreach (explode("/",$link) as $val) {
@@ -106,7 +111,7 @@ function genPage($title,$link) {
 			$ttl = str_replace("-"," ",$val);
 			$ttl = str_replace(".html","",$ttl);
 			$ttl = ucfirst($ttl);
-			$bc.= "<li><a href=\"https://{$config['url']}{$lnk}.html\">{$ttl}</a></li>";
+			$bc.= "<li><a href=\"{$config['type']}://{$config['url']}{$lnk}.html\">{$ttl}</a></li>";
 		}
 	}
 	$_d['bc'] = $bc;
@@ -143,9 +148,19 @@ foreach ($_links as $t=>$link) {
 	echo DIR.$link."<br>";
 	createPage($t,$link,1);
 }
+$_d = [];
 $index = file_get_contents($_SERVER['DOCUMENT_ROOT']."/app/content/index.html");
 $config = json_decode(file_get_contents($_SERVER['DOCUMENT_ROOT']."/app/config.json"),true);
-$index = str_replace("%url%",$config['url'],$index);
+$_d['full-url'] = $config['type']."://".$config['url'];
+$_d['url'] = $config['url'];
+$_d['site-title'] = $config['title'];
+$_d['meta-descr'] = $config['meta_descr'];
+$_d['meta-kw'] = $config['meta_kw'];
+$_d['meta-pict'] = $config['type']."://".$config['url'].$config['meta_pict'];
+$_d['year'] = date('Y');
+foreach ($_d as $k=>$v) {
+	$index = str_replace("%{$k}%",$v,$index);
+}
 $fd = fopen($_SERVER['DOCUMENT_ROOT']."/index.html","w+");
 fputs($fd,$index);
 fclose($fd);

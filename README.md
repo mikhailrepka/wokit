@@ -13,7 +13,7 @@ Ultra simple lightweight UI framework.
 
 ### Version
 
-Current version **0.5.2 Phase 1 (α)**
+Current version **0.5.3 Phase 1 (α)**
 
 ### Links
 
@@ -26,7 +26,7 @@ Current version **0.5.2 Phase 1 (α)**
 	- [x] Docs generator
 	- [x] Colors component
 	- [x] Button component
-	- [ ] Pictures component
+	- [x] Pictures component
 	- [ ] Get started page
 	- [ ] Overview page
 	- [ ] Core page

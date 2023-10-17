@@ -1,7 +1,8 @@
 {
-	"title": "WO Kits",
+	"title": "WO Kit — Ultra simple lightweight UI framework",
+	"type": "https",
 	"url": "mikhailrepka.github.io/wokit",
-	"meta_kw": "",
-	"meta_descr": "",
-	"meta_pict": ""
+	"meta_kw": "ui, framework, css, js, html",
+	"meta_descr": "Ultra simple lightweight UI framework",
+	"meta_pict": "/ui/wokit-snippet.jpg"
 }
