@@ -1,6 +1,5 @@
 # WO UI Kit
-Ultra simple lightweight UI framework
-From Webberin One, php/js private CMS by [webberin.xyz](https://webberin.xyz/).
+Ultra simple lightweight UI framework from Webberin One, php/js private CMS by [webberin.xyz](https://webberin.xyz/).
 
 [![Webberin Digital](https://img.shields.io/badge/Powered_by-Webberin_Digital-purple?style=flat-square)](https://webberin.xyz/)
 [![The MIT License](https://img.shields.io/badge/license-MIT-orange.svg?style=flat-square)](http://opensource.org/licenses/MIT)
@@ -13,7 +12,7 @@ Ultra simple lightweight UI framework.
 
 ### Version
 
-Current version **0.5.3 Phase 1 (α)**
+Current version **0.5.4 Phase 1 (α)**
 
 ### Links
 

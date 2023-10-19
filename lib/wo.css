@@ -1,6 +1,6 @@
 /*!
  * WO Kit
- * development by Webberin Team
+ * development by Mike Repka
  * webberin.agency
  *
  * Licensed MIT for open source use
@@ -18,6 +18,7 @@
 	--wo-gray-light: #cccccc;
 	--wo-gray: #999999;
 	--wo-shadow: rgba(40,40,40,0.2);
+	--wo-faded: rgba(40,40,40,0.5);
 
 	--wo-inverted: #333333;
 	--wo-inverted-dim: #000000;
@@ -112,6 +113,7 @@ h1,h2,h3,h4,h5,h6 {
 	display: block;
 	margin-bottom: var(--wo-gutter);
 	font-weight: 400;
+	color: var(--wo-black);
 }
 h1 {
 	font-size: var(--wo-h1-size);
@@ -398,6 +400,16 @@ em {
 	-ms-transition: all .3s ease-out;
 	-moz-transition: all .3s ease-out;
 	-webkit-transition: all .3s ease-out;
+}
+.__wo-btn.--border-square {
+	border-radius: 0;
+	-moz-border-radius: 0;
+	-webkit-border-radius: 0;
+}
+.__wo-btn.--border-circle {
+	border-radius: var(--wo-border-radius-circle);
+	-moz-border-radius: var(--wo-border-radius-circle);
+	-webkit-border-radius: var(--wo-border-radius-circle);
 }
 .__wo-btn:hover {
 	color: var(--wo-black);
@@ -1403,4 +1415,40 @@ img {
 	border-radius: var(--wo-border-radius-circle);
 	-moz-border-radius: var(--wo-border-radius-circle);
 	-webkit-border-radius: var(--wo-border-radius-circle);
+}
+
+.__wo-pict-bg {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	background-attachment: scroll;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-attachment: scroll;
+	background-color: var(--wo-faded);
+	background-size: cover;
+	-moz-background-size: cover;
+	-webkit-background-size: cover;
+	width: 100%;
+	min-height: 40rem;
+	margin: var(--wo-gutter) auto;
+}
+.__wo-pict-bg.--fixed {
+	background-attachment: fixed;
+}
+.__wo-pict-bg.--faded {
+	background-blend-mode: darken;
+}
+.__wo-pict-bg h1,
+.__wo-pict-bg h2,
+.__wo-pict-bg h3,
+.__wo-pict-bg h4,
+.__wo-pict-bg h5,
+.__wo-pict-bg h6,
+.__wo-pict-bg p,
+.__wo-pict-bg span,
+.__wo-pict-bg strong {
+	color: var(--wo-white);
 }
