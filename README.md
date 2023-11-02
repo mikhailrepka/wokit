@@ -26,7 +26,7 @@ Current version **0.5.4 Phase 1 (α)**
 	- [x] Colors component
 	- [x] Button component
 	- [x] Pictures component
-	- [ ] Get started page
+	- [x] Get started page
 	- [ ] Overview page
 	- [ ] Core page
 2. [ ] Phase 2

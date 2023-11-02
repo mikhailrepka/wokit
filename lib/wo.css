@@ -170,6 +170,10 @@ em {
 	font-style: italic;
 	color: var(--wo-primary-light);
 }
+.__wo-code {
+	display: block;
+	margin-bottom: var(--wo-gutter);
+}
 
 /* WO Notice */
 .__wo-notice {
@@ -1186,7 +1190,7 @@ input[type='checkbox']::before {
 	display: inline-block;
 	width: 1.1rem;
 	height: 1.1rem;
-	transform: translateY(+.25rem);
+	transform: translateY(+.2rem);
 	border-radius: var(--wo-border-radius-button);
 	-moz-border-radius: var(--wo-border-radius-button);
 	-webkit-border-radius: var(--wo-border-radius-button);
