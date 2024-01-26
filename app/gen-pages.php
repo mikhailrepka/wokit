@@ -2,6 +2,12 @@
 define("DIR",$_SERVER['DOCUMENT_ROOT']);
 $tpl = file_get_contents(DIR."/app/tpl.html");
 
+$build = file_get_contents($_SERVER['DOCUMENT_ROOT']."/app/build.txt");
+$build++;
+$fd = fopen($_SERVER['DOCUMENT_ROOT']."/app/build.txt","w+");
+fputs($fd,$build);
+fclose($fd);
+
 $_links = [];
 foreach (json_decode(file_get_contents(DIR.'/app/docs.json'),true) as $ttl => $val) {
 	$link = "";
@@ -89,6 +95,8 @@ function getMenu($link) {
 }
 
 function genPage($title,$link) {
+	global $build;
+
 	$tpl = file_get_contents($_SERVER['DOCUMENT_ROOT']."/app/tpl.html");
 	$html = $tpl;
 	$_d = [];
@@ -119,11 +127,6 @@ function genPage($title,$link) {
 	$_d['bc'] = $bc;
 	$_d['menu'] = getMenu($link);
 	$_d['year'] = date('Y');
-	$build = file_get_contents($_SERVER['DOCUMENT_ROOT']."/app/build.txt");
-	$build++;
-	$fd = fopen($_SERVER['DOCUMENT_ROOT']."/app/build.txt","w+");
-	fputs($fd,$build);
-	fclose($fd);
 	$_d['build'] = $build;
 
 	foreach ($_d as $k=>$v) {
@@ -166,11 +169,11 @@ $_d['meta-kw'] = $config['meta_kw'];
 $_d['version'] = $config['version'];
 $_d['meta-pict'] = $config['type']."://".$config['url'].$config['meta_pict'];
 $_d['year'] = date('Y');
-$build = file_get_contents($_SERVER['DOCUMENT_ROOT']."/app/build.txt");
-$build++;
-$fd = fopen($_SERVER['DOCUMENT_ROOT']."/app/build.txt","w+");
-fputs($fd,$build);
-fclose($fd);
+// $build = file_get_contents($_SERVER['DOCUMENT_ROOT']."/app/build.txt");
+// $build++;
+// $fd = fopen($_SERVER['DOCUMENT_ROOT']."/app/build.txt","w+");
+// fputs($fd,$build);
+// fclose($fd);
 $_d['build'] = $build;
 
 error_log('_d: '.json_encode($_d));

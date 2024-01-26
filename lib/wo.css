@@ -162,6 +162,8 @@ p {
 	font-size: var(--wo-font-size);
 	color: var(--wo-black);
 	line-height: var(--wo-gutter-line);
+	max-width: 100%;
+	overflow-y: auto;
 }
 p.--subtitle {
 	font-size: var(--wo-font-size-s);
