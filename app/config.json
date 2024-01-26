@@ -4,5 +4,6 @@
 	"url": "mikhailrepka.github.io/wokit",
 	"meta_kw": "ui, framework, css, js, html",
 	"meta_descr": "Ultra simple lightweight UI framework",
-	"meta_pict": "/ui/wokit-snippet.jpg"
+	"meta_pict": "/ui/wokit-snippet.jpg",
+	"version": "0.5.5"
 }

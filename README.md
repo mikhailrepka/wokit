@@ -1,6 +1,7 @@
 # WO UI Kit
-Ultra simple lightweight UI framework from Webberin One, php/js private CMS by [webberin.xyz](https://webberin.xyz/).
+Simple lightweight atomic UI framework, a part of Webberin One, php/js CMS by [webberin.xyz](https://webberin.xyz/).
 
+[![WO Kit](https://img.shields.io/badge/WO_Kit-0.5.5-blue?style=flat-square)](https://mikhailrepka.github.io/wokit/)
 [![Webberin Digital](https://img.shields.io/badge/Powered_by-Webberin_Digital-purple?style=flat-square)](https://webberin.xyz/)
 [![The MIT License](https://img.shields.io/badge/license-MIT-orange.svg?style=flat-square)](http://opensource.org/licenses/MIT)
 
@@ -8,16 +9,19 @@ Ultra simple lightweight UI framework from Webberin One, php/js private CMS by [
 
 ### Description
 
-Ultra simple lightweight UI framework.
+I'm happy to introduce to you my frontend toolkit, a lightweight framework called **WO Kit**, short for *Webberin One Kit*, part of my CMF/CMS platform — **Webberin One**.
+
+WO Kit contains `css` and `js` tools to create any UI you want. All css code is built using the **atomic** philosophy, where each element is an atom, each component contains many elements, each of which can be replaced or modified. Element starts with `.__*`, modifier starts with `.--*`.
+
+The main css file contains variables for all settings: **colors** and **sizes**. Each of the following settings is obtained by calculations from the basic variables. That's why you can scale the interface by changing a small number of variables.
 
 ### Version
 
-Current version **0.5.4 Phase 1 (α)**
+Current version **0.5.5 Phase 1 (α)**
 
 ### Links
 
 [Docs](https://mikhailrepka.github.io/wokit/)
-[Backup Docs](https://kit.webberin.dev/)
 
 ### Roadmap
 
@@ -27,7 +31,7 @@ Current version **0.5.4 Phase 1 (α)**
 	- [x] Button component
 	- [x] Pictures component
 	- [x] Get started page
-	- [ ] Overview page
+	- [x] Overview page
 	- [ ] Core page
 2. [ ] Phase 2
 	- [ ] Lists component
@@ -37,7 +41,7 @@ Current version **0.5.4 Phase 1 (α)**
 	- [ ] Inputs component
 	- [ ] Textarea component
 	- [ ] Select component
-	- [ ] Checkboxes / Radio component
+	- [ ] Checks & Radios
 	- [ ] Badges component
 	- [ ] Table component
 3. [ ] Phase 3
@@ -47,7 +51,7 @@ Current version **0.5.4 Phase 1 (α)**
 	- [ ] Cards component
 	- [ ] Breadcrumbs component
 	- [ ] Tabs component
-	- [ ] Alerts component
+	- [x] Alerts component
 	- [ ] Dropdown menu component
 	- [ ] Dialogs component
 4. [ ] Phase 4
@@ -59,7 +63,7 @@ Current version **0.5.4 Phase 1 (α)**
 
 ### License
 
-Copyright © 2023 Mike Repka
+Copyright © 2024 Mike Repka
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

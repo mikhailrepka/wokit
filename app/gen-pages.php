@@ -93,6 +93,7 @@ function genPage($title,$link) {
 	$html = $tpl;
 	$_d = [];
 
+	$_d['content'] = file_get_contents($_SERVER['DOCUMENT_ROOT']."/app/content{$link}");
 	$_d['title'] = $title;
 	$config = json_decode(file_get_contents($_SERVER['DOCUMENT_ROOT']."/app/config.json"),true);
 	$_d['site-title'] = $config['title'];
@@ -101,6 +102,7 @@ function genPage($title,$link) {
 	$_d['link'] = $config['url'].$link;
 	$_d['meta-descr'] = $config['meta_descr'];
 	$_d['meta-kw'] = $config['meta_kw'];
+	$_d['version'] = $config['version'];
 	$_d['meta-pict'] = $config['type']."://".$config['url'].$config['meta_pict'];
 	$_d['year'] = date('Y');
 	$bc = "";
@@ -116,8 +118,13 @@ function genPage($title,$link) {
 	}
 	$_d['bc'] = $bc;
 	$_d['menu'] = getMenu($link);
-	$_d['content'] = file_get_contents($_SERVER['DOCUMENT_ROOT']."/app/content{$link}");
 	$_d['year'] = date('Y');
+	$build = file_get_contents($_SERVER['DOCUMENT_ROOT']."/app/build.txt");
+	$build++;
+	$fd = fopen($_SERVER['DOCUMENT_ROOT']."/app/build.txt","w+");
+	fputs($fd,$build);
+	fclose($fd);
+	$_d['build'] = $build;
 
 	foreach ($_d as $k=>$v) {
 		$html = str_replace("%{$k}%",$v,$html);
@@ -156,8 +163,19 @@ $_d['url'] = $config['url'];
 $_d['site-title'] = $config['title'];
 $_d['meta-descr'] = $config['meta_descr'];
 $_d['meta-kw'] = $config['meta_kw'];
+$_d['version'] = $config['version'];
 $_d['meta-pict'] = $config['type']."://".$config['url'].$config['meta_pict'];
 $_d['year'] = date('Y');
+$build = file_get_contents($_SERVER['DOCUMENT_ROOT']."/app/build.txt");
+$build++;
+$fd = fopen($_SERVER['DOCUMENT_ROOT']."/app/build.txt","w+");
+fputs($fd,$build);
+fclose($fd);
+$_d['build'] = $build;
+
+error_log('_d: '.json_encode($_d));
+error_log('build: '.$_d['build']);
+
 foreach ($_d as $k=>$v) {
 	$index = str_replace("%{$k}%",$v,$index);
 }

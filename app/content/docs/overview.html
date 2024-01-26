@@ -1,2 +1,70 @@
-<h3>Overview</h3>
-<p>Text here</p>
+<h3>WO Kit</h3>
+<p>I'm happy to introduce to you my frontend toolkit, a lightweight framework called <strong>WO Kit</strong>, short for <em>Webberin One Kit</em>, part of my CMF/CMS platform — <strong>Webberin One</strong>.</p>
+<h4>Atomic UI</h4>
+<p>WO Kit contains <code>css</code> and <code>js</code> tools to create any UI you want. All css code is built using the <strong>atomic</strong> philosophy, where each element is an atom, each component contains many elements, each of which can be replaced or modified. Element starts with <code>.__*</code>, modifier starts with <code>.--*</code>.</p>
+<p>The main css file contains variables for all settings: <strong>colors</strong> and <strong>sizes</strong>. Each of the following settings is obtained by calculations from the basic variables. That's why you can scale the interface by changing a small number of variables.</p>
+<p class="__wo-notice --info">Example</p>
+<div class="__wo-col-m12">
+	<button class="__wo-btn --primary">Button example</button>
+</div>
+<div class="__wo-holder-10"></div>
+<p class="__wo-notice --primary">Markup</p>
+<div class="__wo-code">
+	<pre class="language-html"><code>&lt;button class="__wo-btn --primary"&gt;Button example&lt;/button&gt;</code></pre>
+</div>
+<p class="__wo-notice --warning">wo.css</p>
+<div class="__wo-code">
+	<pre class="language-css"><code>:root {
+--wo-white: #fff;
+--wo-bg: #F4F4F4;
+--wo-bg-dim: #EAE7E7;
+--wo-black: #333333;
+
+--wo-primary: #108BB3;
+--wo-primary-dim: #0E7A9D;
+
+--wo-font-size: 1rem;
+--wo-border-radius-button: .25rem;
+}
+
+.__wo-btn {
+	font-size: var(--wo-font-size);
+	color: var(--wo-black);
+	background: var(--wo-bg);
+	padding: calc(var(--wo-font-size) * .5) calc(var(--wo-font-size) * 1);
+	border: 1px solid var(--wo-bg-dim);
+
+	border-radius: var(--wo-border-radius-button);
+	-moz-border-radius: var(--wo-border-radius-button);
+	-webkit-border-radius: var(--wo-border-radius-button);
+}
+.__wo-btn.--primary {
+	color: var(--wo-white);
+	background: var(--wo-primary);
+	border: 1px solid var(--wo-primary-dim);
+}</code></pre>
+</div>
+<div class="__wo-holder-10"></div>
+<h4>HTML5 doctype</h4>
+<p>Of course WO Kit requires the use of the HTML5 doctype.</p>
+<div class="__wo-code">
+	<pre class="language-html"><code>&lt;!doctype html&gt;
+&lt;html&gt;
+	...
+&lt;/html&gt;</code></pre>
+</div>
+<div class="__wo-holder-10"></div>
+<h4>Viewpoint and mobile-first</h4>
+<p>WO Kit is a mobile-first driven framework, that's why you need to use <code>meta</code> element <strong>viewport</strong> like that:</p>
+<div class="__wo-code">
+	<pre class="language-html"><code>&lt;meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0"&gt;</code></pre>
+</div>
+<div class="__wo-holder-0"></div>
+<p>Param <code>user-scalable</code> may be 0 (off) or 1 (on), for your taste. If it off — ui can't be scalable.</p>
+<div class="__wo-holder-10"></div>
+<h4>Bug report and community</h4>
+<p>WO Kit don't have a blog or froums, but you can report issues to <a href="https://github.com/mikhailrepka/wokit/issues" target="_blank">github issues</a>.</p>
+<div class="__wo-holder-10"></div>
+<h4>Get started</h4>
+<p>The next step is the <strong>Get Started</strong> page.</p>
+<a class="__wo-btn" href="%full-url%/get-started.html">Get started<i class="__wo-icon-arrow-right --ml"></i></a>

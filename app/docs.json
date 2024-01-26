@@ -1,6 +1,6 @@
 {
-	"Get started": "/get-started.html",
 	"Overview": "/docs/overview.html",
+	"Get started": "/get-started.html",
 	"Core||/core.html": {
 		"Colors": "/docs/colors.html",
 		"Grid": "/docs/grid.html",
@@ -11,7 +11,7 @@
 		"Input": "/docs/input.html",
 		"Textarea": "/docs/textarea.html",
 		"Select": "/docs/select.html",
-		"Checkbox / radio": "/docs/checkbox-radio.html",
+		"Checks & radios": "/docs/checks-radios.html",
 		"Buttons": "/docs/buttons.html",
 		"Pictures": "/docs/pictures.html",
 		"Badges": "/docs/badges.html",
