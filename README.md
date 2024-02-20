@@ -1,7 +1,7 @@
 # WO UI Kit
 Simple lightweight atomic UI framework, a part of Webberin One, php/js CMS by [webberin.xyz](https://webberin.xyz/).
 
-[![WO Kit](https://img.shields.io/badge/WO_Kit-0.5.5-blue?style=flat-square)](https://mikhailrepka.github.io/wokit/)
+[![WO Kit](https://img.shields.io/badge/WO_Kit-0.6.0-blue?style=flat-square)](https://mikhailrepka.github.io/wokit/)
 [![Webberin Digital](https://img.shields.io/badge/Powered_by-Webberin_Digital-purple?style=flat-square)](https://webberin.xyz/)
 [![The MIT License](https://img.shields.io/badge/license-MIT-orange.svg?style=flat-square)](http://opensource.org/licenses/MIT)
 
@@ -17,7 +17,7 @@ The main css file contains variables for all settings: **colors** and **sizes**.
 
 ### Version
 
-Current version **0.5.5 Phase 1 (α)**
+Current version **0.6.0 Phase 2 (α)**
 
 ### Links
 
@@ -32,7 +32,8 @@ Current version **0.5.5 Phase 1 (α)**
 	- [x] Pictures component
 	- [x] Get started page
 	- [x] Overview page
-	- [ ] Core page
+	- [x] Typography component
+	- [x] Core page
 2. [ ] Phase 2
 	- [ ] Lists component
 	- [ ] Grid component
@@ -59,7 +60,7 @@ Current version **0.5.5 Phase 1 (α)**
 	- [ ] Carousel component
 	- [ ] Popups component
 	- [ ] Swither component
-	- [ ] Icons component
+	- [x] Icons component
 
 ### License
 

@@ -1,0 +1,82 @@
+<h3>Typography</h3>
+<p>Here are ways and practices to wrap the typography of an interface into a unified appearance.</p>
+<div class="__wo-holder-10"></div>
+
+<h4>Headers</h4>
+<h1>Here is Header 1 <code>&lt;h1&gt;&lt;/h1&gt;</code>.</h1>
+<h2>Here is Header 2 <code>&lt;h2&gt;&lt;/h2&gt;</code></h2>
+<h3>Here is Header 3 <code>&lt;h3&gt;&lt;/h3&gt;</code></h3>
+<h4>Here is Header 4 <code>&lt;h4&gt;&lt;/h4&gt;</code></h4>
+<h5>Here is Header 5 <code>&lt;h5&gt;&lt;/h5&gt;</code></h5>
+<h6>Here is Header 6 <code>&lt;h6&gt;&lt;/h6&gt;</code></h6>
+<div class="__wo-holder-10"></div>
+
+<h4>Paragraph</h4>
+<p>Here is paragraph between <code>&lt;p&gt;&lt;/p&gt;</code>.</p>
+<p>You can add class <code>.__wo-notice</code> or element <code>&lt;blockquote&gt;</code> to convert paragraph to notice or blockquote.</p>
+<p class="__wo-notice">Notice example</p>
+<blockquote>Blockquote example</blockquote>
+<div class="__wo-code">
+	<pre class="language-html"><code>&lt;p class="__wo-notice"&gt;Notice example&lt;/p&gt;
+&lt;blockquote&gt;Blockquote example&lt;/blockquote&gt;</code></pre>
+</div>
+<p>Also you can change color of notice by adding color modificatiors. Example:</p>
+<p class="__wo-notice --danger">Danger notice example</p>
+<p class="__wo-notice --warning">Warning notice example</p>
+<p class="__wo-notice --info">Info notice example</p>
+<p class="__wo-notice --success">Success notice example</p>
+<p class="__wo-notice --primary">Primary notice example</p>
+<div class="__wo-code">
+	<pre class="language-html"><code>&lt;p class="__wo-notice --danger"&gt;Danger notice example&lt;/p&gt;
+&lt;p class="__wo-notice --warning"&gt;Warning notice example&lt;/p&gt;
+&lt;p class="__wo-notice --info"&gt;Info notice example&lt;/p&gt;
+&lt;p class="__wo-notice --success"&gt;Success notice example&lt;/p&gt;
+&lt;p class="__wo-notice --primary"&gt;Primary notice example&lt;/p&gt;</code></pre>
+</div>
+<div class="__wo-holder-10"></div>
+
+<h4>Inline elements</h4>
+<p>I'm using semantic tags to markup, here is examples:</p>
+<p>This is <strong>strong</strong> element to make it <strong>bold</strong>, using <code>&lt;strong&gt;...&lt;/strong&gt;</code></p>
+<p>This is <em>em</em> element to make it <em>italic</em>, using <code>&lt;em&gt;...&lt;/em&gt;</code></p>
+<p>This is <del>del</del> element to meant is text <del>deleted</del>, using <code>&lt;del&gt;...&lt;/del&gt;</code></p>
+<p>This is <s>s</s> element to meant is <s>no longer accurate</s>, using <code>&lt;s&gt;...&lt;/s&gt;</code></p>
+<p>This is <u>u</u> element to make text <u>underlined</u>, using <code>&lt;u&gt;...&lt;/u&gt;</code></p>
+<p>This is <ins>ins</ins> element to meant is <ins>an addition to the above text</ins>, using <code>&lt;ins&gt;...&lt;/ins&gt;</code></p>
+<p>This is <small>small</small> element to meant text is <small>fine print</small>, using <code>&lt;small&gt;...&lt;/small&gt;</code></p>
+<p>This is <mark>mark</mark> element to <mark>highlight</mark> something, using <code>&lt;mark&gt;...&lt;/mark&gt;</code></p>
+
+<div class="__wo-holder-10"></div>
+
+<h4>Holders</h4>
+<p>I'm using <em>holder-elements</em> for markup, this is breakers after floating divs and white spaces there they needed. I call them <code>.__wo-holder-*</code> where <em>*</em> is a number of margin (in <strong>rem</strong> dividen into ten). For example:</p>
+
+<code>&lt;div class="__wo-holder-0"&gt;&lt;/div&gt;</code>
+<p>Is a breaker with no margin</p>
+
+<code>&lt;div class="__wo-holder-1"&gt;&lt;/div&gt;</code>
+<p>Is a holder with <code>.1rem</code> height.</p>
+
+<code>&lt;div class="__wo-holder-5"&gt;&lt;/div&gt;</code>
+<p>Is a holder with <code>.5rem</code> height.</p>
+
+<code>&lt;div class="__wo-holder-10"&gt;&lt;/div&gt;</code>
+<p>Is a holder with <code>1rem</code> height.</p>
+
+<code>&lt;div class="__wo-holder-20"&gt;&lt;/div&gt;</code>
+<p>Is a holder with <code>2rem</code> height.</p>
+
+<p>You can use them in a row.</p>
+<div class="__wo-holder-10"></div>
+
+<h4>Alignment</h4>
+<p>Simple text utilities for alignment, it can be <code>&lt;p&gt;</code> or <code>&lt;div&gt;</code>.</p>
+<p class="--wo-text-left">This text aligned to left.</p>
+<p class="--wo-text-right">This text aligned to right.</p>
+<div class="--wo-text-center">This text aligned to center.</div>
+<div class="__wo-holder-10"></div>
+<div class="__wo-code">
+	<pre class="language-html"><code>&lt;p class="--wo-text-left"&gt;This text aligned to left.&lt;/p&gt;
+&lt;p class="--wo-text-right"&gt;This text aligned to right.&lt;/p&gt;
+&lt;div class="--wo-text-center"&gt;This text aligned to center.&lt;/div&gt;</code></pre>
+</div>

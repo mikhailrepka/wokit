@@ -2,6 +2,7 @@
 	"Overview": "/docs/overview.html",
 	"Get started": "/get-started.html",
 	"Core||/core.html": {
+		"Typography": "/docs/typography.html",
 		"Colors": "/docs/colors.html",
 		"Grid": "/docs/grid.html",
 		"Header": "/docs/header.html",
@@ -32,5 +33,6 @@
 		"Switcher": "/docs/switcher.html"
 	},
 	"Roadmap": "/roadmap.html",
-	"Changelog": "/changelog.html"
+	"Changelog": "/changelog.html",
+	"License": "/license.html"
 }

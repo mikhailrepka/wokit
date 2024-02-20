@@ -6,17 +6,22 @@
  * Licensed MIT for open source use
  *
  * https://getwokit.tech
- * Copyright 2023 Webberin
+ * Copyright 2024 Webberin
  */
 
 /* WO Colors and Sizes */
 :root {
 	--wo-white: #fff;
+	--wo-white-transparent: rgba(255,255,255,0.8);
 	--wo-bg: #F4F4F4;
+	--wo-bg-transparent: rgba(244,244,244,0.8);
 	--wo-bg-dim: #EAE7E7;
 	--wo-black: #333333;
+	--wo-black-light: #363636;
+	--wo-black-dim: #000000;
 	--wo-gray-light: #cccccc;
-	--wo-gray: #999999;
+	--wo-gray: #777777;
+	--wo-gray-dim: #999999;
 	--wo-shadow: rgba(40,40,40,0.2);
 	--wo-faded: rgba(40,40,40,0.5);
 
@@ -188,13 +193,42 @@ em {
 	font-style: italic;
 	color: var(--wo-primary-light);
 }
+del,
+s {
+	font-weight: 400;
+	font-size: inherit;
+	font-style: normal;
+	padding: 0 calc(var(--wo-gutter)*.1);
+}
+u,
+ins {
+	font-weight: 400;
+	font-size: inherit;
+	font-style: normal;
+	text-decoration: underline;
+}
+small {
+	font-weight: 300;
+	color: inherit;
+	opacity: 1;
+}
+mark {
+	font-weight: inherit;
+	font-size: inherit;
+	background-color: var(--wo-info-bg);
+	color: var(--wo-info-text);
+	display: inline-block;
+	border: 1px solid transparent;
+	padding: calc(var(--wo-gutter)*0) calc(var(--wo-gutter)*.25);
+}
 .__wo-code {
 	display: block;
 	margin-bottom: var(--wo-gutter);
 }
 
 /* WO Notice */
-.__wo-notice {
+.__wo-notice,
+blockquote {
 	font-size: var(--wo-font-size);
 	line-height: var(--wo-gutter-line);
 	display: block;
@@ -206,23 +240,28 @@ em {
 	border-left-color: var(--wo-gray);
 	color: var(--wo-black);
 }
-.__wo-notice.--primary {
+.__wo-notice.--primary,
+blockquote.--primary {
 	border-left-color: var(--wo-primary-dim);
 	color: var(--wo-primary-text);
 }
-.__wo-notice.--success {
+.__wo-notice.--success,
+blockquote.--success {
 	border-left-color: var(--wo-success-dim);
 	color: var(--wo-success-text);
 }
-.__wo-notice.--danger {
+.__wo-notice.--danger,
+blockquote.--danger {
 	border-left-color: var(--wo-danger-dim);
 	color: var(--wo-danger-text);
 }
-.__wo-notice.--warning {
+.__wo-notice.--warning,
+blockquote.--warning {
 	border-left-color: var(--wo-warning-dim);
 	color: var(--wo-warning-text);
 }
-.__wo-notice.--info {
+.__wo-notice.--info,
+blockquote.--info {
 	border-left-color: var(--wo-info-dim);
 	color: var(--wo-info-text);
 }
@@ -969,8 +1008,8 @@ ul.__wo-menu-tree li ul li::before {
 .__wo-grid {
 	padding: 0;
 	margin: 0;
-	margin-left: calc(var(--wo-gutter) * 2 * -1);
-	margin-right: calc(var(--wo-gutter) * 2 * -1);
+	margin-left: calc(var(--wo-gutter) * .5 * -1);
+	margin-right: calc(var(--wo-gutter) * .5 * -1);
 	position: relative;
 	z-index: 1;
 }
